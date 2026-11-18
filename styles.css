@@ -1,0 +1,373 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("assets/montserrat-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("assets/montserrat-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("assets/eb-garamond-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  max-width: 412px;
+  background: #fff;
+  container-type: inline-size;
+  -webkit-text-size-adjust: 100%;
+}
+p, h1, h2 { margin: 0; }
+a { color: inherit; text-decoration: none; }
+
+.landing-page {
+  width: 412px;
+  overflow: clip;
+  background: #fff;
+  /* Scale the 412px Figma canvas to narrow mobile screens. */
+  zoom: tan(atan2(100cqw, 412px));
+}
+.panel { position: relative; }
+.brand-header { height: 112px; }
+.intro { height: 207px; }
+.product-photo { height: 413px; }
+.order { height: 307px; }
+.ingredients { height: 718px; }
+.partnership { height: 323px; }
+.rewards { height: 580px; }
+.community { height: 548px; }
+.family { height: 413px; }
+.contact { height: 204px; }
+.social { height: 76px; }
+.svg-natural { width: auto; height: auto; }
+
+.action-link { z-index: 1; }
+.action-link::after { content: ""; position: absolute; inset: -7px 0; }
+.action-link:focus-visible, .social a:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+.social-links {
+  position: absolute;
+  inset: 30px 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.social-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 32px;
+  color: white;
+  font: 600 10px/1.15 Montserrat, Arial, sans-serif;
+  white-space: nowrap;
+}
+.social-links a::after {
+  content: "";
+  position: absolute;
+  inset: -6px -4px;
+}
+
+/* Figma layer geometry within each section. */
+.position-absolute { position: absolute; }
+.layout-contents { display: contents; }
+.left-neg-94px { left: -94px; }
+.top-edge { top: 0; }
+.center-horizontally { translate: -50% 0; }
+.flex { display: flex; }
+.height-30px { height: 30px; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.left-calc-50pct-7-5px { left: calc(50% - 7.5px); }
+.top-82px { top: 82px; }
+.width-585px { width: 585px; }
+.flip-vertical { scale: 1 -1; }
+.fixed-flex-item { flex: none; }
+.position-relative { position: relative; }
+.display-block { display: block; }
+.inset-zero { inset: 0; }
+.unrestricted-width { max-width: none; }
+.left-calc-50pct-plus-17-5px { left: calc(50% + 17.5px); }
+.background--9f1a1a { background: #9f1a1a; }
+.height-82px { height: 82px; }
+.left-edge { left: 0; }
+.width-412px { width: 412px; }
+.wrap-text { overflow-wrap: anywhere; }
+.display-type { font-family: 'Apple Garamond', 'EB Garamond', Georgia, serif; font-style: italic!important; font-weight: 700; }
+.height-23px { height: 23px; }
+.line-height-normal { line-height: normal; }
+.left-calc-50pct-0-5px { left: calc(50% - 0.5px); }
+.upright { font-style: normal; }
+.font-size-20px { font-size: 20px; }
+.center-text { text-align: center; }
+.white-text { color: #fff; }
+.top-59px { top: 59px; }
+.width-335px { width: 335px; }
+.height-20px { height: 20px; }
+.left-187px { left: 187px; }
+.box-shadow-0px-4px-4px-0px-rgba-0-0-0-0-25 { box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25); }
+.top-29px { top: 29px; }
+.width-37px { width: 37px; }
+.cover-image { object-fit: cover; }
+.ignore-pointer { pointer-events: none; }
+.fill-box { width: 100%; height: 100%; }
+.left-center { left: 50%; }
+.top-40px { top: 40px; }
+.width-73px { width: 73px; }
+.color--9f1a1a { color: #9f1a1a; }
+.emphasis-type { font-family: Montserrat, Arial, sans-serif; font-style: italic; font-weight: 700; }
+.bold { font-weight: 700; }
+.height-36px { height: 36px; }
+.italic { font-style: italic; }
+.font-size-15px { font-size: 15px; }
+.black-text { color: #000; }
+.top-74px { top: 74px; }
+.width-214px { width: 214px; }
+.body-type { font-family: Montserrat, Arial, sans-serif; }
+.semibold { font-weight: 600; }
+.height-47px { height: 47px; }
+.font-size-10px { font-size: 10px; }
+.top-120px { top: 120px; }
+.width-331px { width: 331px; }
+.height-413px { height: 413px; }
+.top-0px { top: 0px; }
+.clip { overflow: hidden; }
+.height-149-64pct { height: 149.64%; }
+.left-0-02pct { left: 0.02%; }
+.top-neg-40-02pct { top: -40.02%; }
+.full-width { width: 100%; }
+.height-59px { height: 59px; }
+.left-calc-50pct-plus-0-5px { left: calc(50% + 0.5px); }
+.top-55px { top: 55px; }
+.width-343px { width: 343px; }
+.top-133px { top: 133px; }
+.width-247px { width: 247px; }
+.top-221px { top: 221px; }
+.height-31px { height: 31px; }
+.border-radius-20px { border-radius: 20px; }
+.box-shadow-0px-2px-2px-0px-rgba-0-0-0-0-25 { box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25); }
+.width-253px { width: 253px; }
+.height-11px { height: 11px; }
+.left-205-5px { left: 205.5px; }
+.top-230px { top: 230px; }
+.width-163px { width: 163px; }
+.height-336px { height: 336px; }
+.border-radius-10px { border-radius: 10px; }
+.width-269px { width: 269px; }
+.height-208-096px { height: 208.096px; }
+.top-138px { top: 138px; }
+.width-173-535px { width: 173.535px; }
+.rotate-neg-6-89deg { rotate: -6.89deg; }
+.height-191-274px { height: 191.274px; }
+.box-shadow-5px-5px-10px-0px-rgba-0-0-0-0-2 { box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2); }
+.width-151-675px { width: 151.675px; }
+.height-243-75pct { height: 243.75%; }
+.left-neg-104-93pct { left: -104.93%; }
+.top-neg-104-3pct { top: -104.3%; }
+.width-204-93pct { width: 204.93%; }
+.top-383px { top: 383px; }
+.height-335px { height: 335px; }
+.left-72px { left: 72px; }
+.width-268px { width: 268px; }
+.left-calc-50pct-87-83px { left: calc(50% - 87.83px); }
+.top-536px { top: 536px; }
+.height-9-035px { height: 9.035px; }
+.width-37-373px { width: 37.373px; }
+.height-4-518px { height: 4.518px; }
+.left-118-17px { left: 118.17px; }
+.font-size-4px { font-size: 4px; }
+.top-537-64px { top: 537.64px; }
+.width-22-588px { width: 22.588px; }
+.left-calc-50pct-plus-81-37px { left: calc(50% + 81.37px); }
+.left-287-37px { left: 287.37px; }
+.width-33-266px { width: 33.266px; }
+.left-calc-50pct-plus-80-37px { left: calc(50% + 80.37px); }
+.top-647-71px { top: 647.71px; }
+.left-286-37px { left: 286.37px; }
+.top-649-35px { top: 649.35px; }
+.left-calc-50pct-plus-106-01px { left: calc(50% + 106.01px); }
+.top-591-03px { top: 591.03px; }
+.left-311-81px { left: 311.81px; }
+.top-593-09px { top: 593.09px; }
+.width-33-676px { width: 33.676px; }
+.left-calc-50pct-85-83px { left: calc(50% - 85.83px); }
+.top-646-47px { top: 646.47px; }
+.left-120-37px { left: 120.37px; }
+.top-648-12px { top: 648.12px; }
+.width-23-82px { width: 23.82px; }
+.left-calc-50pct-104-31px { left: calc(50% - 104.31px); }
+.top-590-21px { top: 590.21px; }
+.left-101-69px { left: 101.69px; }
+.top-591-85px { top: 591.85px; }
+.top-48px { top: 48px; }
+.width-305px { width: 305px; }
+.left-31px { left: 31px; }
+.top-108px { top: 108px; }
+.height-71px { height: 71px; }
+.line-height-0 { line-height: 0; }
+.width-308px { width: 308px; }
+.no-bottom-margin { margin-bottom: 0; }
+.height-29px { height: 29px; }
+.font-size-12px { font-size: 12px; }
+.top-201px { top: 201px; }
+.width-349px { width: 349px; }
+.top-245px { top: 245px; }
+.left-207-5px { left: 207.5px; }
+.top-254px { top: 254px; }
+.width-167px { width: 167px; }
+.left-neg-82px { left: -82px; }
+.height-158px { height: 158px; }
+.left-calc-50pct-1-5px { left: calc(50% - 1.5px); }
+.width-417px { width: 417px; }
+.height-191px { height: 191px; }
+.left-calc-50pct-1px { left: calc(50% - 1px); }
+.top-11px { top: 11px; }
+.inset-neg-12-57pct--4-85pct--8-38pct--4-85pct { inset: -12.57% -4.85% -8.38% -4.85%; }
+.filter-0-5px { filter: blur(0.5px); }
+.size-170px { width: 170px; height: 170px; }
+.left-324px { left: 324px; }
+.left-228px { left: 228px; }
+.size-87-883px { width: 87.883px; height: 87.883px; }
+.top-8px { top: 8px; }
+.rotate-neg-13-35deg { rotate: -13.35deg; }
+.size-73px { width: 73px; height: 73px; }
+.left-80px { left: 80px; }
+.size-91-067px { width: 91.067px; height: 91.067px; }
+.top-121px { top: 121px; }
+.rotate-16-9deg { rotate: 16.9deg; }
+.height-65px { height: 65px; }
+.font-size-0px { font-size: 0px; }
+.width-251px { width: 251px; }
+.font-size-25px { font-size: 25px; }
+.left-neg-1px { left: -1px; }
+.top-159px { top: 159px; }
+.height-143px { height: 143px; }
+.inset-neg-14-69pct--4-85pct--13-29pct--4-85pct { inset: -14.69% -4.85% -13.29% -4.85%; }
+.height-80px { height: 80px; }
+.text-shadow-0px-4px-4px-rgba-0-0-0-0-25 { text-shadow: 0px 4px 4px rgba(0,0,0,0.25); }
+.top-191px { top: 191px; }
+.width-237px { width: 237px; }
+.height-136px { height: 136px; }
+.left-15px { left: 15px; }
+.top-177px { top: 177px; }
+.height-149-67pct { height: 149.67%; }
+.left-neg-31-06pct { left: -31.06%; }
+.top-neg-49-67pct { top: -49.67%; }
+.width-159-01pct { width: 159.01%; }
+.top-182px { top: 182px; }
+.width-70px { width: 70px; }
+.height-167-32pct { height: 167.32%; }
+.left-neg-58-6pct { left: -58.6%; }
+.top-neg-67-32pct { top: -67.32%; }
+.width-186-31pct { width: 186.31%; }
+.left-neg-71px { left: -71px; }
+.top-272px { top: 272px; }
+.height-120px { height: 120px; }
+.left-342px { left: 342px; }
+.top-302px { top: 302px; }
+.width-142px { width: 142px; }
+.height-125pct { height: 125%; }
+.left-neg-44-36pct { left: -44.36%; }
+.top-neg-11-67pct { top: -11.67%; }
+.width-188-09pct { width: 188.09%; }
+.top-313px { top: 313px; }
+.width-301px { width: 301px; }
+.left-neg-4px { left: -4px; }
+.top-378px { top: 378px; }
+.top-436px { top: 436px; }
+.inset-neg-10-99pct--4-85pct--9-95pct--4-85pct { inset: -10.99% -4.85% -9.95% -4.85%; }
+.height-111px { height: 111px; }
+.top-422px { top: 422px; }
+.width-256px { width: 256px; }
+.height-217px { height: 217px; }
+.left-43px { left: 43px; }
+.top-279px { top: 279px; }
+.width-325px { width: 325px; }
+.top-46px { top: 46px; }
+.height-112-57pct { height: 112.57%; }
+.left-neg-6-94pct { left: -6.94%; }
+.top-neg-7-91pct { top: -7.91%; }
+.width-112-7pct { width: 112.7%; }
+.height-138-24pct { height: 138.24%; }
+.top-neg-13-32pct { top: -13.32%; }
+.top-47px { top: 47px; }
+.width-327px { width: 327px; }
+.height-35px { height: 35px; }
+.top-81px { top: 81px; }
+.width-297px { width: 297px; }
+.top-137px { top: 137px; }
+.left-218px { left: 218px; }
+.top-146px { top: 146px; }
+.width-144px { width: 144px; }
+.left-123px { left: 123px; }
+.size-18px { width: 18px; height: 18px; }
+.top-144px { top: 144px; }
+.left-calc-50pct-8-5px { left: calc(50% - 8.5px); }
+.height-46px { height: 46px; }
+.top-30px { top: 30px; }
+.height-14px { height: 14px; }
+.left-65px { left: 65px; }
+.top-39px { top: 39px; }
+.width-60px { width: 60px; }
+.width-59px { width: 59px; }
+.left-307px { left: 307px; }
+.width-55px { width: 55px; }
+.left-50px { left: 50px; }
+.size-14px { width: 14px; height: 14px; }
+.left-172px { left: 172px; }
+.left-292px { left: 292px; }
+
+[data-node-id="3:232"],
+[data-node-id="41:16"],
+[data-node-id="12:295"],
+[data-node-id="12:298"] {
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Fit the fallback Garamond to the reference headline proportions. */
+.display-type {
+  scale: 0.87 1;
+  white-space: nowrap;
+  line-height: 1.13;
+}
+.display-type .line-height-normal {
+  display: block;
+  line-height: 1.13;
+}
+[data-node-id="12:296"] span:last-child,
+.rewards .font-size-25px { margin-top: 3px; }
+.body-type.line-height-normal { line-height: 1.15; }
+[data-node-id="37:2"],
+[data-node-id="38:5"],
+[data-node-id="39:9"],
+[data-node-id="9:271"],
+[data-node-id="9:292"] { margin-top: -1px; }
+
+/* Use the cropped transparent overlay directly to avoid a rotated clipping seam. */
+.milk-splash {
+  display: block;
+  width: 151.675px;
+  height: 191.274px;
+  pointer-events: none;
+}
+
+/* Overlap the footer wave and base at fractional device pixels. */
+.social-base {
+  inset: 28px 0 0;
+}
+[data-node-id="47:43"] img { top: -10.1%; }
+
+/* Overlap the header and its wave so fractional scaling cannot expose a seam. */
+.brand-header [data-node-id="38:3"] { height: 84px; }

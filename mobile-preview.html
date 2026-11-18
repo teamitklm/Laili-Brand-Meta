@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laili Brand Meta | Mobile Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100dvh;
+      margin: 0;
+      background: #f0ece9;
+    }
+    iframe {
+      display: block;
+      width: min(390px, 100vw);
+      height: min(844px, 100dvh);
+      border: 0;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 8px 32px rgb(0 0 0 / 15%);
+    }
+    @media (max-width: 390px) {
+      iframe { height: 100dvh; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <iframe src="index.html" title="Laili Brand Meta mobile website"></iframe>
+</body>
+</html>
